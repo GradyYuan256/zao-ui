@@ -2,15 +2,15 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import {createRouter, createWebHashHistory} from 'vue-router'
 
-import Yuan from './components/Yuan.vue'
-import Xxx from './components/Xxx.vue'
+import Home from './views/Home.vue'
+import Doc from './views/Doc.vue'
 
 const history = createWebHashHistory()
 const router = createRouter({
     history: history,
     routes: [
-        {path: '/', component: Yuan},
-        {path: '/xxx', component: Xxx}
+        {path: '/', component: Home},
+        {path: '/doc', component: Doc}
     ]
 })
 const app = createApp(App)

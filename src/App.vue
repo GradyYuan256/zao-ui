@@ -4,7 +4,6 @@
 </script>
 
 <template>
-  <div>导航栏 | <router-link to="/">Yuan</router-link> | <router-link to="/xxx">XXX</router-link></div>
   <router-view></router-view>
 </template>
 
