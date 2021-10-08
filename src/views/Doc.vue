@@ -2,7 +2,7 @@
 import { inject, Ref } from 'vue'
 import Topnav from '../components/Topnav.vue'
 
-const menuVisible = inject<Ref<boolean>>('xxx')
+const menuVisible = inject<Ref<boolean>>('menuVisible')
 // console.log(menuVisible?.value)
 
 </script>
