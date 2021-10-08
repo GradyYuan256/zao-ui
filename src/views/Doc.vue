@@ -1,8 +1,17 @@
+<script setup lang="ts">
+import { inject, Ref } from 'vue'
+import Topnav from '../components/Topnav.vue'
+
+const menuVisible = inject<Ref<boolean>>('xxx')
+// console.log(menuVisible?.value)
+
+</script>
+
 <template>
     <div>
         <Topnav/>
         <div class="content">
-            <aside>
+            <aside v-if="menuVisible">
                 <h2>组件列表</h2>
                 <ol>
                     <li>
@@ -23,10 +32,6 @@
         </div>
     </div>
 </template>
-
-<script setup lang="ts">
-import Topnav from '../components/Topnav.vue'
-</script>
 
 <style lang="scss" scoped>
 aside {
