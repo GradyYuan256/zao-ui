@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-const checked = ref(true);
+
+const props = defineProps({
+  value: Boolean
+})
+const emit = defineEmits(['input'])
 const toggle = () => {
-    checked.value = !checked.value
+    emit('input', !props.value)
 }
 </script>
 
 <template>
-    <button :class="{checked}" @click="toggle">
+    <button :class="{checked: value}" @click="toggle">
         <span></span>
     </button>
 </template>
@@ -33,11 +37,15 @@ span {
     width: $h2;
     background: white;
     border-radius: math.div($h2, 2);
+    transition: left .25s;
 }
 button.checked {
     background: blue;
 }
 button.checked span {
     left: calc(100% - #{$h2} - 2px);
+}
+button:focus {
+    outline: none;
 }
 </style>
