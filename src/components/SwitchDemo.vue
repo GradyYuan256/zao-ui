@@ -7,7 +7,7 @@ const y = ref(false)
 
 <template>
     <div>
-        <Switch :value="y" @input="y = $event" />
+        <Switch :value="y" @input="y = !!$event" />
     </div>
 </template>
 
