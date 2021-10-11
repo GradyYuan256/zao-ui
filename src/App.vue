@@ -9,7 +9,7 @@ const menuVisible = ref(width <= 500 ? false : true)
 provide('menuVisible', menuVisible)
 router.afterEach(() => {
   // to and from are both route objects.
-  if(width <= 500) {
+  if (width <= 500) {
     menuVisible.value = false
   }
 })
@@ -20,5 +20,4 @@ router.afterEach(() => {
 </template>
 
 <style>
-
 </style>
