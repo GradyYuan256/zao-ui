@@ -2,7 +2,6 @@
 import { inject, Ref } from 'vue'
 
 const menuVisible = inject<Ref<boolean>>('menuVisible')
-// console.log(menuVisible?.value)
 
 const toggleMenu = () => {
     if(menuVisible) {
