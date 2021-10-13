@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Topnav from '../components/Topnav.vue'
+</script>
+
 <template>
     <div>
         <Topnav />
@@ -11,10 +15,6 @@
         </div>
     </div>
 </template>
-
-<script setup lang="ts">
-import Topnav from '../components/Topnav.vue'
-</script>
 
 <style lang="scss" scoped>
 @use "sass:math";
