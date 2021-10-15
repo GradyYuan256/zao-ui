@@ -11,17 +11,17 @@ const toggle = () => {
 </script>
 
 <template>
-    <button :class="{ checked: value }" @click="toggle">
+    <button class="zao-switch" :class="{ 'zao-checked': value }" @click="toggle">
         <span></span>
     </button>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use "sass:math";
 
 $h: 22px;
 $h2: $h - 4px;
-button {
+.zao-switch {
     height: $h;
     width: $h * 2;
     border: none;
@@ -39,7 +39,7 @@ button {
         transition: all 0.25s;
     }
 
-    &.checked {
+    &.zao-checked {
         background: #1890ff;
         > span {
             left: calc(100% - #{$h2} - 2px);
@@ -53,7 +53,7 @@ button {
             width: $h2 + 4px;
         }
     }
-    &.checked:active {
+    &.zao-checked:active {
         > span {
             width: $h2 + 4px;
             margin-left: -4px;
