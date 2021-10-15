@@ -1,110 +1,12 @@
 <script setup lang="ts">
-
+import Button from '../lib/Button.vue'
 </script>
 
 <template>
+    <div>Button 示例</div>
+    <h1>示例1</h1>
     <div>
-        Button 文档
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
-        <p>Button 的文档</p>
+        <Button>你好</Button>
     </div>
 </template>
 
