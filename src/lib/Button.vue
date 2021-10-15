@@ -5,17 +5,17 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { useAttrs } from 'vue'
-
-const attrs = useAttrs()
-const {size, ...rest} = attrs
+const props = defineProps({
+    theme: {
+        type: String,
+        default: 'button'
+    }
+})
 
 </script>
 
 <template>
-    <div :size="size">
-        <button v-bind="rest">
-            <slot />
-        </button>
-    </div>
+    <button class="zao-button" :class="{[`theme-${theme}`]: theme}">
+        <slot />
+    </button>
 </template>
