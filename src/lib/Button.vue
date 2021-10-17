@@ -5,17 +5,30 @@ export default {
 </script>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+
 const props = defineProps({
     theme: {
         type: String,
         default: 'button'
+    },
+    size: {
+      type: String,
+      default: "normal",
     }
 })
+
+const classes = computed(() => {
+    return {
+        [`zao-theme-${props.theme}`]: props.theme,
+        [`zao-size-${props.size}`]: props.size,
+    };
+});
 
 </script>
 
 <template>
-    <button class="zao-button" :class="{[`zao-theme-${theme}`]: theme}">
+    <button class="zao-button" :class="classes">
         <slot />
     </button>
 </template>
