@@ -13,12 +13,16 @@ const props = defineProps({
         default: 'button'
     },
     size: {
-      type: String,
-      default: "normal",
+        type: String,
+        default: "normal",
     },
     level: {
-      type: String,
-      default: "normal",
+        type: String,
+        default: "normal",
+    },
+    disabled: {
+        type: Boolean,
+        default: false,
     },
 })
 
@@ -33,7 +37,7 @@ const classes = computed(() => {
 </script>
 
 <template>
-    <button class="zao-button" :class="classes">
+    <button class="zao-button" :class="classes" :disabled="disabled">
         <slot />
     </button>
 </template>
@@ -45,6 +49,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .zao-button {
     box-sizing: border-box;
     height: $h;
@@ -146,6 +151,21 @@ $red: red;
             &:focus {
                 color: darken($red, 10%);
             }
+        }
+    }
+    &.zao-theme-button {
+        &[disabled] {
+            cursor: not-allowed;
+            color: $grey;
+            &:hover {
+                border-color: $grey;
+            }
+        }
+    }
+    &.zao-theme-link, &.zao-theme-text {
+        &[disabled] {
+            cursor: not-allowed;
+            color: $grey;
         }
     }
 }
