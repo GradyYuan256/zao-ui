@@ -3,7 +3,6 @@ import Button from '../lib/Button.vue'
 
 const onClick = () => {
     console.log(111);
-    
 }
 </script>
 
