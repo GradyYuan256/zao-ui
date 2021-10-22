@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import Button from '../lib/Button.vue'
-
+const props = defineProps({
+    visible: {
+        type: Boolean,
+        default: false
+    }
+})
 </script>
 
-<template>
+<template v-if="visible">
     <div class="zao-dialog-overlay"></div>
     <div class="zao-dialog-wrapper">
         <div class="zao-dialog">
