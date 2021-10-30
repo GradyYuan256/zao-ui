@@ -1,28 +1,63 @@
 <script setup lang="ts">
 import Button from '../lib/Button.vue'
 const props = defineProps({
-    visible: {
-        type: Boolean,
-        default: false
-    }
+  visible: {
+    type: Boolean,
+    default: false
+  },
+  closeOnClickOverlay: {
+    type: Boolean,
+    default: true
+  },
+  ok: {
+    type: Function
+  },
+  cancel: {
+    type: Function
+  }
 })
+const emit = defineEmits(['update:visible', 'cancel'])
+const close = () => {
+  emit('update:visible', false)
+}
+const onClickOverlay = () => {
+  if (props.closeOnClickOverlay) {
+    close()
+  }
+}
+const ok = () => {
+
+  if (props.ok?.() !== false) {
+    close()
+  }
+}
+const cancel = () => {
+  emit('cancel')
+  close()
+}
+
 </script>
 
-<template v-if="visible">
-    <div class="zao-dialog-overlay"></div>
+<template>
+  <template v-if="visible">
+    <div class="zao-dialog-overlay" @click="onClickOverlay"></div>
     <div class="zao-dialog-wrapper">
-        <div class="zao-dialog">
-            <header>标题 <span class="zao-dialog-close"></span></header>
-            <main>
-                <p>第一行字</p>
-                <p>第二行字</p>
-            </main>
-            <footer>
-                <Button level="main">OK</Button>
-                <Button>Cancel</Button>
-            </footer>
-        </div>
+      <div class="zao-dialog">
+        <header>
+          标题
+          <span @click="close" class="zao-dialog-close"></span>
+        </header>
+        <main>
+          <p>第一行字</p>
+          <p>第二行字</p>
+        </main>
+        <footer>
+          <Button level="main" @click="ok">OK</Button>
+          <Button @click="cancel">Cancel</Button>
+        </footer>
+      </div>
     </div>
+  </template>
 </template>
 
 <style lang="scss">
@@ -50,7 +85,7 @@ $border-color: #d9d9d9;
     transform: translate(-50%, -50%);
     z-index: 11;
   }
-  >header {
+  > header {
     padding: 12px 16px;
     border-bottom: 1px solid $border-color;
     display: flex;
@@ -58,10 +93,10 @@ $border-color: #d9d9d9;
     justify-content: space-between;
     font-size: 20px;
   }
-  >main {
+  > main {
     padding: 12px 16px;
   }
-  >footer {
+  > footer {
     border-top: 1px solid $border-color;
     padding: 12px 16px;
     text-align: right;
@@ -74,7 +109,7 @@ $border-color: #d9d9d9;
     cursor: pointer;
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 1px;
       background: black;
