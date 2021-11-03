@@ -26,7 +26,6 @@ const onClickOverlay = () => {
   }
 }
 const ok = () => {
-
   if (props.ok?.() !== false) {
     close()
   }
@@ -35,7 +34,6 @@ const cancel = () => {
   emit('cancel')
   close()
 }
-
 </script>
 
 <template>
