@@ -31,7 +31,8 @@ const ok = () => {
   }
 }
 const cancel = () => {
-  emit('cancel')
+  // emit('cancel')
+  props.cancel?.()
   close()
 }
 </script>
