@@ -29,8 +29,8 @@ export const openDialog = (options: IDialogOptions) => {
                     ok, cancel
                 },
                 {
-                    title,
-                    content,
+                    title: () => title,
+                    content: () => content,
                 }
             )
         }
