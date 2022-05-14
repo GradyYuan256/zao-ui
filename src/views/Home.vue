@@ -9,7 +9,7 @@ import Topnav from '../components/Topnav.vue'
             <h1>Zao UI</h1>
             <h2>一个基础的 UI 框架</h2>
             <p class="actions">
-                <a href="https://github.com/jackyuan256/zao-ui" target="_blank">Github</a>
+                <a href="https://github.com/GradyYuan256/zao-ui" target="_blank">Github</a>
                 <router-link to="/doc">开始</router-link>
             </p>
         </div>
